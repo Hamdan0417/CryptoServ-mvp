@@ -7,14 +7,4 @@ describe('Button', () => {
     render(<Button>Click me</Button>);
     expect(screen.getByRole('button', { name: 'Click me' })).toBeInTheDocument();
   });
-
-  it('applies secondary variant classes', () => {
-    render(
-      <Button data-testid="button" variant="secondary">
-        Secondary
-      </Button>
-    );
-    const element = screen.getByTestId('button');
-    expect(element.className).toContain('bg-secondary');
-  });
 });

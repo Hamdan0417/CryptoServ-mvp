@@ -7,7 +7,6 @@ storybook-static
 dist
 build
 coverage
-test-results
 .env
 .env.local
 .env.*.local

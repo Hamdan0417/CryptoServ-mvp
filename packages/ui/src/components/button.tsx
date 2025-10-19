@@ -1,8 +1,9 @@
 import { Slot } from '@radix-ui/react-slot';
 import { ButtonHTMLAttributes, forwardRef } from 'react';
-import { cn } from '../lib/cn';
+import { clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
-type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'outline';
+type ButtonVariant = 'primary' | 'secondary' | 'ghost';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   asChild?: boolean;
@@ -12,8 +13,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 const variantStyles: Record<ButtonVariant, string> = {
   primary: 'bg-primary text-primary-foreground hover:bg-primary/90',
   secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/90',
-  ghost: 'bg-transparent text-secondary hover:bg-secondary/10',
-  outline: 'border border-secondary/20 text-secondary hover:border-secondary hover:bg-secondary/5'
+  ghost: 'bg-transparent text-secondary-foreground hover:bg-secondary/10'
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -22,10 +22,12 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <Comp
         ref={ref}
-        className={cn(
-          'inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60',
-          variantStyles[variant],
-          className
+        className={twMerge(
+          clsx(
+            'inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
+            variantStyles[variant],
+            className
+          )
         )}
         {...props}
       />

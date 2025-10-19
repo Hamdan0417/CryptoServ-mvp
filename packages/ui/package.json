@@ -1,6 +1,6 @@
 {
   "name": "@crypto-serv/ui",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "private": true,
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -10,8 +10,6 @@
     "build": "tsup src/index.ts --format esm,cjs --dts",
     "dev": "tsup src/index.ts --watch",
     "lint": "eslint src --ext .ts,.tsx",
-    "storybook": "storybook dev -p 6006",
-    "storybook:build": "storybook build",
     "test": "vitest run",
     "test:watch": "vitest"
   },
@@ -21,23 +19,13 @@
   },
   "dependencies": {
     "@crypto-serv/config": "workspace:*",
-    "@radix-ui/react-accordion": "^1.1.2",
-    "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-slot": "^1.0.3",
     "clsx": "^2.1.0",
-    "framer-motion": "^11.0.6",
-    "lucide-react": "^0.372.0",
     "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^8.0.0",
-    "@storybook/addon-interactions": "^8.0.0",
-    "@storybook/blocks": "^8.0.0",
-    "@storybook/react-vite": "^8.0.0",
-    "@storybook/test": "^8.0.0",
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^14.2.1",
-    "@types/node": "^20.11.24",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.19",
     "@typescript-eslint/eslint-plugin": "^7.3.1",
@@ -45,11 +33,9 @@
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "jsdom": "^24.0.0",
-    "postcss": "^8.4.35",
+    "prettier": "^3.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "storybook": "^8.0.0",
-    "tailwindcss": "^3.4.1",
     "tsup": "^8.0.1",
     "typescript": "^5.4.0",
     "vitest": "^1.4.0"
