@@ -1,0 +1,24 @@
+version: '3'
+
+tasks:
+  dev:all:
+    desc: Start local services and run all app dev servers
+    cmds:
+      - docker compose up -d
+      - pnpm dev:all
+  dev:web:
+    desc: Run web app in development mode
+    cmds:
+      - pnpm dev:web
+  dev:admin:
+    desc: Run admin app in development mode
+    cmds:
+      - pnpm dev:admin
+  dev:api:
+    desc: Run api app in development mode
+    cmds:
+      - pnpm dev:api
+  stop:
+    desc: Stop docker services and dev processes
+    cmds:
+      - docker compose down
