@@ -1,11 +1,11 @@
-# CheasyInvest: Official Project Repository & Contribution Guide
+# Crypto Serve: Official Project Repository & Contribution Guide
 
-Welcome to the official home of the CheasyInvest project! This document is your central hub for understanding our vision, exploring our technical architecture, and learning how to contribute. We've designed this guide to be accessible for everyone, from potential investors to seasoned developers.
+Welcome to the official home of the Crypto Serve project! This document is your central hub for understanding our vision, exploring our technical architecture, and learning how to contribute. We've designed this guide to be accessible for everyone, from potential investors to seasoned developers.
 
 ---
 
 ## 1. Vision at a Glance
-CheasyInvest (code name: Crypto Serv) is a vertically integrated Web3 services ecosystem. We connect talent, employers, service providers, and investors through a single trust-first platform powered by the SERV utility token.
+Crypto Serve is a vertically integrated Web3 services ecosystem. We connect talent, employers, service providers, and investors through a single trust-first platform powered by the SERV utility token.
 
 ### 1.1 Value Proposition
 | Stakeholder | Core Value | Supporting Features |
@@ -189,4 +189,4 @@ Initial PRs focus on scaffolding; advanced logic arrives in later milestones per
 ---
 
 ## 10. License
-CheasyInvest is released under the [MIT License](LICENSE). Update the license if business requirements change.
+Crypto Serve is released under the [MIT License](LICENSE). Update the license if business requirements change.

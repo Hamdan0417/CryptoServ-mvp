@@ -1,6 +1,6 @@
 # @crypto-serv/config
 
-Centralized configuration presets (ESLint, Prettier, Tailwind CSS, and TypeScript) for the CheasyInvest monorepo.
+Centralized configuration presets (ESLint, Prettier, Tailwind CSS, and TypeScript) for the Crypto Serve monorepo.
 
 ## Usage Examples
 - **ESLint:** `extends: ['@crypto-serv/config/eslint']`

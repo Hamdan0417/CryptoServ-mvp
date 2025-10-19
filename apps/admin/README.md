@@ -1,6 +1,6 @@
-# CheasyInvest Admin Console
+# Crypto Serve Admin Console
 
-The admin console empowers operations, compliance, support, and growth teams to govern the CheasyInvest platform.
+The admin console empowers operations, compliance, support, and growth teams to govern the Crypto Serve platform.
 
 ## Current Status
 This PR seeds the Next.js workspace with Tailwind styling and placeholder content. Future roadmap items will introduce RBAC, approvals, KPI dashboards, and audit logs (see PR7).

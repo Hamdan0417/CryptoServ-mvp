@@ -1,4 +1,4 @@
-# CheasyInvest Developer Tools
+# Crypto Serve Developer Tools
 
 Automation scripts that streamline local development, database seeding, and data migrations will live here.
 

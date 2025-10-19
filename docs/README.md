@@ -1,4 +1,4 @@
-# CheasyInvest Documentation Hub
+# Crypto Serve Documentation Hub
 
 Use this workspace to capture Architecture Decision Records (ADRs), OpenAPI/GraphQL specifications, and operational runbooks.
 

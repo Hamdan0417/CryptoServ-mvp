@@ -1,4 +1,4 @@
-# CheasyInvest Smart Contracts
+# Crypto Serve Smart Contracts
 
 Hardhat workspace for the SERV token suite (ERC20, staking pools, vesting, airdrop, escrow, governance).
 

@@ -1,6 +1,6 @@
-# CheasyInvest API Gateway
+# Crypto Serve API Gateway
 
-NestJS service providing REST and (future) GraphQL access to CheasyInvest modules such as Auth, Identity, Marketplace, and Governance.
+NestJS service providing REST and (future) GraphQL access to Crypto Serve modules such as Auth, Identity, Marketplace, and Governance.
 
 ## Capabilities Delivered in PR0
 - ConfigModule bootstrap with environment-driven configuration.

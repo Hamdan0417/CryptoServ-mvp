@@ -1,6 +1,6 @@
-# CheasyInvest Web Experience
+# Crypto Serve Web Experience
 
-This Next.js application delivers both the public marketing site and authenticated dashboards for the CheasyInvest (Crypto Serv) ecosystem.
+This Next.js application delivers both the public marketing site and authenticated dashboards for the Crypto Serve ecosystem.
 
 ## Key Capabilities
 - Wallet-first onboarding entry point.

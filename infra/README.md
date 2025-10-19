@@ -1,4 +1,4 @@
-# CheasyInvest Infrastructure Stack
+# Crypto Serve Infrastructure Stack
 
 This folder houses infrastructure-as-code assets and CI/CD automation.
 
