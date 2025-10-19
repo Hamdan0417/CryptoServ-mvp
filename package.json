@@ -1,0 +1,24 @@
+{
+  "name": "crypto-serv",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@8.15.4",
+  "scripts": {
+    "dev:all": "turbo run dev --parallel",
+    "dev:web": "turbo run dev --filter=@crypto-serv/web",
+    "dev:admin": "turbo run dev --filter=@crypto-serv/admin",
+    "dev:api": "turbo run dev --filter=@crypto-serv/api",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo run clean"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@crypto-serv/config": "workspace:*",
+    "prettier": "^3.3.3",
+    "prettier-plugin-solidity": "^2.1.0",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "turbo": "^2.1.3"
+  }
+}

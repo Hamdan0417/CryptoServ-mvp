@@ -1,0 +1,18 @@
+{
+  "extends": "../packages/config/tsconfig/base.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "target": "es2020",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "types": ["node", "mocha"]
+  },
+  "include": [
+    "./hardhat.config.ts",
+    "./scripts",
+    "./test",
+    "./contracts"
+  ]
+}
