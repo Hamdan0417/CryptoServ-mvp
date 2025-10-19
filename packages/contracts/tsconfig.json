@@ -1,0 +1,14 @@
+{
+  "extends": "@crypto-serv/config/tsconfig",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": "dist"
+  },
+  "include": [
+    "hardhat.config.ts",
+    "scripts",
+    "test",
+    "contracts"
+  ],
+  "exclude": ["node_modules"]
+}

@@ -212,22 +212,23 @@ crypto-serv/
 
 ## Getting Started
 ```bash
-# Clone and bootstrap the monorepo
-pnpm dlx create-turbo@latest crypto-serv
-cd crypto-serv
+# Install dependencies
 pnpm install
 
-# Start local services
-task dev:all       # spins up web, admin, and api apps concurrently
+# Start databases, cache, and object storage
+docker compose up -d
 
-# Run database migrations
+# Launch web, admin, and api dev servers via Turborepo
+pnpm dev:all
+
+# Apply Prisma migrations once they are defined
 pnpm --filter api prisma migrate dev
 
-# Execute contract test suite
-pnpm --filter contracts test
+# Run smart contract tests
+pnpm --filter @crypto-serv/contracts test
 ```
 
-> **Note:** Replace the placeholder commands with the actual scripts once the monorepo scaffolding is committed. Prefer `pnpm` for workspace management to benefit from deterministic installs and caching.
+> **Note:** You can also run `task dev:all` if you have [go-task](https://taskfile.dev) installed; it wraps `docker compose up -d` and `pnpm dev:all` for convenience.
 
 ---
 
