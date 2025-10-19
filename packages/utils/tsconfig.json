@@ -1,0 +1,7 @@
+{
+  "extends": "@crypto-serv/config/tsconfig",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": ["src"]
+}
