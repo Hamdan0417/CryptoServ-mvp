@@ -189,6 +189,14 @@ Crypto Serv is a vertically integrated Web3 services platform that unifies talen
 | **Phase 3 – Ecosystem Expansion** | 2026 | DAO governance, third-party integrations, fiat ramps, mobile apps, on-chain reputation scoring. |
 | **Phase 4 – Global Scale** | 2027+ | Multi-chain deployments, institutional compliance programs, marketplace franchising, AI advisory copilots. |
 
+### Sprint Progress Snapshot
+
+- **PR1 (UI Kit & Landing):** Storybook-backed marketing primitives plus experience architecture landing flow shipped in `apps/web`.
+- **PR2 (Auth & Identity):** SIWE nonce/signature handshake, session cookies, persona gating, and WalletConnect-ready onboarding (`/connect`).
+- **PR4 (Talent Hub):** Prisma models, CRUD endpoints, and Next.js dashboards for profiles, job board, and application tracking.
+- **PR5 (Marketplace Escrow Stub):** Engagement + milestone endpoints with employer persona guardrails for escrow orchestration.
+- **PR8 (Token & Staking):** SERV ERC20 upgrades, staking pool contract/tests, and API surface for staking-based gating.
+
 ---
 
 ## Repository Layout & Tooling
