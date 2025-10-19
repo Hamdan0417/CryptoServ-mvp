@@ -1,0 +1,7 @@
+version: '3'
+tasks:
+  dev:all:
+    desc: "Run docker services and all app dev servers"
+    cmds:
+      - docker compose up -d
+      - pnpm dev:all
