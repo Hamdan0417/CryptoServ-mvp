@@ -1,0 +1,15 @@
+{
+  "extends": "../../packages/config/tsconfig/base.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": "dist",
+    "module": "commonjs"
+  },
+  "include": [
+    "hardhat.config.ts",
+    "scripts",
+    "test",
+    "contracts"
+  ],
+  "exclude": ["node_modules"]
+}

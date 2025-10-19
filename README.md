@@ -1,244 +1,225 @@
-# Crypto Serv: The All-in-One Crypto Services Ecosystem
+# CheasyInvest: Official Project Repository & Contribution Guide
+
+Welcome to the official home of the CheasyInvest project! This document is your central hub for understanding our vision, exploring our technical architecture, and learning how to contribute. We've designed this guide to be accessible for everyone, from potential investors to seasoned developers.
 
 ## Table of Contents
-- [Executive Summary](#executive-summary)
-- [Value Proposition](#value-proposition)
-- [Ecosystem Pillars](#ecosystem-pillars)
-- [Personas & Experience Journeys](#personas--experience-journeys)
-- [Product Modules](#product-modules)
-- [Experience Architecture](#experience-architecture)
-- [Technical Architecture](#technical-architecture)
-- [Smart Contract Suite](#smart-contract-suite)
-- [Data Model Snapshot](#data-model-snapshot)
-- [Security, Compliance & Risk](#security-compliance--risk)
-- [Delivery Roadmap](#delivery-roadmap)
-- [Repository Layout & Tooling](#repository-layout--tooling)
-- [Getting Started](#getting-started)
-- [Contribution Guidelines](#contribution-guidelines)
-- [License](#license)
+- [1. Project Snapshot](#1-project-snapshot)
+- [2. Experience Journey at a Glance](#2-experience-journey-at-a-glance)
+- [3. Technical Blueprint](#3-technical-blueprint)
+- [4. Step-by-Step Setup Guide](#4-step-by-step-setup-guide)
+- [5. Usage Walkthroughs](#5-usage-walkthroughs)
+- [6. Repository Layout](#6-repository-layout)
+- [7. Delivery Roadmap](#7-delivery-roadmap)
+- [8. Contribution Guidelines](#8-contribution-guidelines)
+- [9. Security & Compliance Priorities](#9-security--compliance-priorities)
+- [10. Licensing](#10-licensing)
 
 ---
 
-## Executive Summary
-Crypto Serv is a vertically integrated Web3 services platform that unifies talent, projects, and investors through a single, trusted experience. The ecosystem blends a professional job network, a certified services marketplace, distressed project recovery programs, and an investor gateway with the SERV utility token at its core. This README captures the product vision, system design, and delivery blueprint so multidisciplinary teams can move from concept to launch with clarity.
+## 1. Project Snapshot
+CheasyInvest is a full-stack Web3 services ecosystem that links talent, employers, service providers, and investors through a unified experience powered by the SERV utility token. Think of it as a platform where:
+
+- **Talent** discover curated roles, build on-chain reputations, and earn rewards for contributing to Web3 projects.
+- **Employers and service buyers** access trusted professionals, manage engagements, and release payments through escrow-backed milestones.
+- **Investors** review vetted opportunities, unlock gated intelligence with staking tiers, and participate in governance.
+- **Platform operators** maintain compliance, risk controls, and growth programs through dedicated admin tooling.
 
 ---
 
-## Value Proposition
-| Stakeholder | Core Value | Supporting Features |
-| --- | --- | --- |
-| Talent | A curated job market with crypto-native employers and instant Web3 identity. | Wallet login, verified profiles, application tracking, SERV-backed incentives. |
-| Projects & Service Providers | Operational support to launch, certify, and scale Web3 ventures. | Licensing concierge, quality assurance audits, recovery playbooks, escrowed payouts. |
-| Investors | Access to vetted opportunities and data-driven insights. | Deal room access, due diligence dashboards, SERV staking tiers for gated content. |
-| Ecosystem Partners | Framework to extend trusted services and co-market offerings. | API integrations, co-branded landing pages, governance participation via DAO. |
-
----
-
-## Ecosystem Pillars
-1. **Trusted Identity & Compliance** – Wallet-first authentication, KYC/AML workflows, and attestations to keep interactions reputable.
-2. **Services Marketplace** – Multi-vertical catalog ranging from audits to legal operations, augmented by programmatic SLAs and escrow.
-3. **Career Acceleration** – Talent profiles, role matching, mentoring, and credentialing to onboard professionals into Web3 careers.
-4. **Investor Intelligence** – Token-gated analytics, curated deal flow, and performance scorecards to drive confident capital deployment.
-5. **SERV Token Utility** – Payments, staking, loyalty, and governance token that rewards participation and underpins the economic flywheel.
-
----
-
-## Personas & Experience Journeys
-### 1. Talent (Job Seekers & Contractors)
-- **Onboarding:** Connect wallet → complete profile wizard → optional KYC → showcase work portfolio.
-- **Engagement:** Explore job listings, subscribe to role alerts, apply with one-click submissions, unlock premium insights by staking SERV.
-- **Success Metrics:** Applications sent, interviews secured, SERV earned through referrals, satisfaction rating.
-
-### 2. Employers & Service Buyers
-- **Onboarding:** Create organization profile → verify business credentials → deposit SERV for premium tools.
-- **Engagement:** Post jobs, review applicants, book marketplace services, fund escrow for engagements.
-- **Success Metrics:** Time-to-hire, project satisfaction, repeat engagements, SERV velocity through payment channels.
-
-### 3. Service Providers & Recovery Experts
-- **Onboarding:** Submit service offering → pass due diligence → list packages with deliverables & pricing.
-- **Engagement:** Manage leads, negotiate via secure messaging, track milestones, release payments via escrow smart contracts.
-- **Success Metrics:** Utilization rate, SLA adherence, customer reviews, SERV loyalty bonuses earned.
-
-### 4. Investors & Strategic Partners
-- **Onboarding:** Verify accredited status → stake SERV to unlock tiers → connect to analytics dashboard.
-- **Engagement:** Browse vetted deal room, download diligence packs, book AMAs, participate in governance proposals.
-- **Success Metrics:** Deals evaluated, allocations deployed, governance participation score, portfolio performance.
-
-### 5. Platform Administrators
-- **Onboarding:** Assign RBAC roles (Ops, Compliance, Support, Growth).
-- **Engagement:** Monitor KPIs, manage support tickets, approve marketplace listings, configure token economics.
-- **Success Metrics:** Platform uptime, compliance incident rate, NPS, SLA breach frequency.
-
----
-
-## Product Modules
-| Module | Description | Key Capabilities |
-| --- | --- | --- |
-| **Unified Onboarding** | Wallet connect + progressive profiling with optional Web2 federation. | Multi-wallet support, persona selection, attestations, guided KYC. |
-| **Talent Hub** | Profiles, job board, applications, and mentorship marketplace. | Smart search, AI-powered matching, application tracker, portfolio showcase. |
-| **Employer Console** | Hire, engage contractors, and monitor workforce analytics. | Job posting CMS, pipeline dashboard, integrated messaging, SERV-based premium unlocks. |
-| **Services Marketplace** | Catalog of certified partners delivering audits, legal, marketing, recovery, and compliance support. | Service listings, scoped proposals, milestone tracking, escrowed payments, SLA automation. |
-| **Recovery Desk** | Specialized workflows for distressed projects requiring restructuring. | Intake triage, assessment templates, expert routing, recovery playbooks. |
-| **Investor Network** | Token-gated portal to vetted deals, performance metrics, and DAO governance. | Tiered access control, secure data rooms, due diligence workflows, proposal voting. |
-| **SERV Token Hub** | Staking, rewards, airdrop management, and loyalty insights. | Staking pools, claim portal, vesting schedules, referral & ambassador programs. |
-| **Knowledge Center** | Educational hub with compliance guides, certification criteria, and industry benchmarks. | CMS, localization, multimedia support, search analytics. |
-| **Admin & Analytics** | Command center for operations, compliance, customer success, and growth. | RBAC, audit logs, anomaly detection, KPI dashboards, configuration of fees and campaigns. |
-
----
-
-## Experience Architecture
+## 2. Experience Journey at a Glance
 ```
-[ Landing Page ] --> [ Wallet Connect ] --> [ Persona Selection ]
-          |                    |                     |
-          v                    v                     v
-   [Public Marketing]   [Identity Services]   [Compliance Screening]
-          |                    |                     |
-          v                    v                     v
-   +----------------------+-------------------------------+
-   | Personalized Dashboards (Talent / Employer / Investor)|
-   +----------------------+-------------------------------+
-          |                    |                     |
-   [Job Discovery]    [Marketplace Booking]    [Investor Deal Room]
-          |                    |                     |
-          v                    v                     v
-   [Applications]      [Service Engagement]    [Governance Portal]
-          |                    |                     |
-          v                    v                     v
-   [SERV Rewards Layer & Analytics Feedback Loop]
+[ Landing Page ] → [ Wallet Connect ] → [ Persona Selection ]
+        |                   |                    |
+        v                   v                    v
+ [Public Marketing]   [Identity Services]   [Compliance Screening]
+        |                   |                    |
+        v                   v                    v
++---------------------------------------------------------------+
+| Personalized Dashboards (Talent / Employer / Investor)        |
++---------------------------------------------------------------+
+        |                   |                    |
+ [Job Discovery]    [Marketplace Booking]    [Investor Deal Room]
+        |                   |                    |
+        v                   v                    v
+ [Applications]      [Service Engagement]    [Governance Portal]
+        |                   |                    |
+        v                   v                    v
+     [SERV Rewards Layer & Analytics Feedback Loop]
 ```
 
----
+Each persona experiences tailored onboarding, dashboards, and call-to-actions. The ecosystem pillars supporting this flow are:
 
-## Technical Architecture
-### Frontend
-- Next.js with TypeScript and Tailwind CSS for SSR/SSG marketing pages and authenticated dashboards.
-- React Query or Apollo Client for data fetching depending on REST vs GraphQL endpoints.
-- Component library built with Radix UI primitives and Storybook documentation.
-
-### Backend & APIs
-- NestJS (Node.js) as the primary application layer exposing REST + GraphQL endpoints.
-- Modular services for Auth, Talent, Marketplace, Investor, and Token operations.
-- API Gateway to enforce rate limiting, JWT verification, and signature validation for wallet actions.
-
-### Blockchain & Token Infrastructure
-- Solidity smart contracts deployed to EVM-compatible networks (BSC + Ethereum L2 for cost efficiency).
-- Hardhat for development, Foundry for fuzz testing, OpenZeppelin libraries for security-hardened implementations.
-- Oracles (Chainlink) for off-chain data feeds and price references.
-
-### Data & Storage
-- PostgreSQL for relational data with Prisma ORM.
-- Redis for session caching, rate limiting tokens, and job search indexing.
-- S3-compatible object storage (e.g., AWS S3, Backblaze) for documents, media, and compliance evidence.
-- ElasticSearch (optional) for faceted job search and marketplace discovery.
-
-### Integrations
-- KYC/AML provider (e.g., Sumsub) via secure webhook ingestion.
-- Email/SMS notifications (SendGrid, Twilio) with localization support.
-- Analytics stack: Segment → BigQuery → Metabase dashboards.
-
-### DevOps & Deployment
-- Monorepo managed with Turborepo; CI/CD via GitHub Actions.
-- Infrastructure as Code using Terraform targeting AWS (EKS for services, RDS for Postgres, ElastiCache for Redis).
-- Canary deployments with feature flagging (LaunchDarkly) for gradual rollouts.
+1. **Trusted Identity & Compliance** – Wallet-first authentication with KYC/AML checks.
+2. **Services Marketplace** – Certified partners with escrowed milestones.
+3. **Career Acceleration** – Talent profiles, job board, and mentorship.
+4. **Investor Intelligence** – Token-gated data room and analytics.
+5. **SERV Token Utility** – Payments, staking, loyalty, and governance.
 
 ---
 
-## Smart Contract Suite
-| Contract | Purpose | Key Considerations |
-| --- | --- | --- |
-| `SERVToken` | Core ERC-20/BEP-20 utility token. | Mint/burn controls, pausability, anti-whale rules, audited by third-party. |
-| `StakingPools` | Support variable-term staking with reward schedules. | APR adjustments via governance, slash protection, auto-compounding option. |
-| `AirdropVault` | Manage campaign configurations and eligibility snapshots. | Merkle proofs for claims, claim windows, bot mitigation. |
-| `VestingVault` | Handle team, advisor, and partner vesting cliffs. | Linear & milestone-based vesting, revocation controls. |
-| `EscrowService` | Hold funds for marketplace engagements. | Milestone-based release, dispute resolution hooks, oracle-assisted arbitration. |
-| `GovernanceModule` | Delegate voting on platform policies and economic levers. | Quadratic or delegated voting, proposal lifecycle, timelock executor. |
+## 3. Technical Blueprint
+CheasyInvest is built as a Turborepo monorepo using pnpm for package management. Each layer can be extended independently while sharing consistent tooling.
+
+### Frontend Applications (Next.js + TypeScript + Tailwind)
+- `apps/web`: Marketing site and authenticated dashboards.
+- `apps/admin`: RBAC-protected admin console for operations, compliance, support, and growth teams.
+- Shared UI powered by Radix UI primitives and shadcn/ui, distributed from `packages/ui` with Storybook documentation.
+
+### Backend Services (NestJS + Prisma)
+- `apps/api`: Modular API exposing REST and GraphQL endpoints covering Auth, Identity, Compliance, Talent, Employer, Marketplace, Recovery, Investor, Token, and Admin domains.
+- Gateway responsibilities include rate limiting, JWT issuance, and EIP-4361 “Sign-In with Ethereum”.
+- PostgreSQL (via Prisma), Redis, and S3-compatible storage are configured for persistence, sessions, and document handling.
+
+### Smart Contracts (Solidity + Hardhat + Foundry)
+- `packages/contracts`: Contains SERVToken (ERC20), staking pools, vesting, airdrop, escrow, and governance modules.
+- Foundry/Hardhat pipelines provide compilation, testing, and coverage reports.
+
+### DevEx & Tooling
+- `packages/config`: Centralizes ESLint, Prettier, Tailwind, tsconfig, and commit linting.
+- `packages/utils`: Shared TypeScript helpers.
+- GitHub Actions (to be expanded) enforce lint/test/build for each workspace.
+- Docker Compose stands up PostgreSQL, Redis, and MinIO locally.
 
 ---
 
-## Data Model Snapshot
-| Table | Description | Relationships |
-| --- | --- | --- |
-| `users` | Wallet address, persona flags, contact info, compliance status. | 1:N with profiles, job_applications, services. |
-| `profiles` | Persona-specific metadata (talent, employer, investor). | Belongs to users; references portfolios, company data. |
-| `companies` | Employer and service provider organizations. | Linked to users (owners) and jobs/services. |
-| `jobs` | Listings with compensation, requirements, location, visibility settings. | Owned by companies; has many job_applications. |
-| `job_applications` | Application records including status, notes, documents. | Joins jobs and users (talent). |
-| `services` | Catalog items with pricing tiers, SLA terms, certification metadata. | Linked to companies; references escrow_contracts. |
-| `engagements` | Active service contracts with milestones, deliverables, escrow state. | Joins services, users (buyers), users (providers). |
-| `stakes` | SERV staking positions and reward accrual metrics. | References users and staking_pools. |
-| `governance_votes` | Proposal participation records. | Joins users and governance_proposals. |
+## 4. Step-by-Step Setup Guide
+Whether you are a non-technical stakeholder exploring the platform or an engineer ready to contribute, follow these steps to get a working environment.
 
----
+### 4.1 Prerequisites
+1. **Node.js 20+** – Install from [nodejs.org](https://nodejs.org) or use nvm.
+2. **pnpm 8+** – `npm install -g pnpm`.
+3. **Docker & Docker Compose** – Required for Postgres, Redis, and MinIO.
+4. **Git** – Clone the repository.
 
-## Security, Compliance & Risk
-- **Access Control:** Role-based access with fine-grained permissions enforced at the service and API layers.
-- **Data Protection:** Encryption in transit (TLS 1.3) and at rest (KMS-managed keys); GDPR-compliant data lifecycle policies.
-- **Wallet Security:** Signature nonce management, session expiry, and phishing-resistant prompts.
-- **Compliance:** Integrated KYC/AML and travel rule support for fiat on/off ramps.
-- **Monitoring:** SIEM integration, anomaly detection alerts, quarterly penetration testing, bug bounty program.
-- **Business Continuity:** Multi-region infrastructure replicas, disaster recovery runbooks, regular backup validation.
-
----
-
-## Delivery Roadmap
-| Phase | Timeframe | Key Deliverables |
-| --- | --- | --- |
-| **Phase 0 – Foundations** | Q4 2024 | Brand guidelines, requirements finalization, smart contract architecture, compliance framework selection. |
-| **Phase 1 – MVP Launch** | Q2 2025 | Wallet onboarding, talent hub, employer console, basic marketplace, SERV token deployment, admin dashboards. |
-| **Phase 2 – Growth** | Q4 2025 | Investor network, staking enhancements, recovery desk automation, analytics suite, localization. |
-| **Phase 3 – Ecosystem Expansion** | 2026 | DAO governance, third-party integrations, fiat ramps, mobile apps, on-chain reputation scoring. |
-| **Phase 4 – Global Scale** | 2027+ | Multi-chain deployments, institutional compliance programs, marketplace franchising, AI advisory copilots. |
-
----
-
-## Repository Layout & Tooling
-```
-crypto-serv/
-├── apps/
-│   ├── web/                # Next.js frontend (marketing + dashboards)
-│   ├── admin/              # Ops console (Next.js / Remix)
-│   └── api/                # NestJS backend service
-├── packages/
-│   ├── ui/                 # Shared component library (Storybook)
-│   ├── config/             # ESLint, Prettier, Tailwind, tsconfig
-│   ├── contracts/          # Solidity smart contracts with Hardhat
-│   └── utils/              # Shared TypeScript utilities
-├── docs/                   # Architecture decision records, API specs, runbooks
-├── infra/                  # Terraform modules, Helm charts, deployment manifests
-└── tools/                  # Scripts for code generation, database migrations
-```
-
----
-
-## Getting Started
+### 4.2 Clone the Repository
 ```bash
-# Clone and bootstrap the monorepo
-pnpm dlx create-turbo@latest crypto-serv
-cd crypto-serv
+git clone https://github.com/your-org/cheasyinvest.git
+cd cheasyinvest
+```
+
+### 4.3 Install Dependencies
+```bash
 pnpm install
+```
+This command bootstraps every workspace (apps and packages) in the monorepo.
 
-# Start local services
-task dev:all       # spins up web, admin, and api apps concurrently
+### 4.4 Configure Environment Variables
+1. Duplicate `.env.example` to `.env` at the repository root.
+2. Adjust values as needed (database URLs, JWT secrets, SIWE configuration, S3 credentials). Defaults are designed for local development.
 
-# Run database migrations
+### 4.5 Start Supporting Services
+```bash
+docker compose up -d
+```
+PostgreSQL, Redis, and MinIO will run in the background. You can inspect logs with `docker compose logs -f`.
+
+### 4.6 Run the Development Suite
+```bash
+pnpm dev:all
+```
+This script concurrently launches:
+- `apps/web` on `http://localhost:3000`
+- `apps/admin` on `http://localhost:3001`
+- `apps/api` on `http://localhost:3002`
+
+When prompted by the web app, connect a wallet (or use the development mock) and explore persona-specific dashboards.
+
+### 4.7 Database Migrations & Seeds
+Once the API is running:
+```bash
 pnpm --filter api prisma migrate dev
+pnpm --filter api db:seed   # (placeholder command for upcoming seed scripts)
+```
+These commands keep your schema aligned with the latest migrations.
 
-# Execute contract test suite
+### 4.8 Smart Contract Tooling
+```bash
 pnpm --filter contracts test
 ```
-
-> **Note:** Replace the placeholder commands with the actual scripts once the monorepo scaffolding is committed. Prefer `pnpm` for workspace management to benefit from deterministic installs and caching.
-
----
-
-## Contribution Guidelines
-1. Follow the [Conventional Commits](https://www.conventionalcommits.org/) standard.
-2. Ensure unit, integration, and contract tests pass before opening a pull request.
-3. Update documentation (README, ADRs, API specs) alongside feature changes.
-4. Run security linters (ESLint, npm audit, Slither, MythX) for applicable packages.
-5. Use feature flags for experimental modules and avoid breaking public APIs without versioning.
+Executes Hardhat/Foundry unit tests to validate token and staking logic.
 
 ---
 
-## License
-This project is licensed under the [MIT License](LICENSE). Replace or update the license file if a different licensing model is required.
+## 5. Usage Walkthroughs
+### 5.1 Non-Technical Tour
+1. Visit `http://localhost:3000` for the marketing experience.
+2. Explore the landing sections describing Talent, Employer, Marketplace, and Investor journeys.
+3. Use the Wallet Connect stub to preview onboarding without needing a crypto wallet.
+4. Navigate to persona dashboards to understand the tailored workflows and data insights.
+
+### 5.2 Technical Deep-Dive
+1. Inspect API modules within `apps/api/src` to learn how Auth, Talent, Marketplace, and Token services are structured.
+2. Review Prisma schema at `apps/api/prisma/schema.prisma` for data relationships (users, profiles, companies, jobs, job_applications, services, engagements, stakes, governance_votes, and more).
+3. Open the `packages/ui` Storybook to view reusable components:
+   ```bash
+   pnpm --filter ui storybook
+   ```
+4. Analyze smart contracts in `packages/contracts/contracts/` to understand on-chain mechanics.
+
+### 5.3 Testing & Quality Assurance
+- **Frontend E2E:** `pnpm --filter web test:e2e`
+- **Backend Unit & E2E:** (to be added in future sprints using Jest + Supertest).
+- **Contracts:** `pnpm --filter contracts test`
+
+---
+
+## 6. Repository Layout
+```
+crypto-serv/
+  apps/
+    web/      # Next.js marketing + dashboards
+    admin/    # Next.js admin console with RBAC
+    api/      # NestJS REST + GraphQL gateway
+  packages/
+    ui/       # Shared component library (Radix UI + shadcn/ui)
+    config/   # ESLint, Prettier, Tailwind, tsconfig, commitlint
+    contracts/# Solidity suite (Hardhat + Foundry)
+    utils/    # Shared TypeScript utilities
+  docs/       # ADRs, API specs, runbooks
+  infra/      # Terraform skeleton, Helm charts, GitHub Actions
+  tools/      # Dev scripts, seeds, migrations
+```
+
+---
+
+## 7. Delivery Roadmap
+We deliver features through focused pull requests:
+1. **PR0 – Bootstrap & Tooling:** Turborepo setup, configs, Docker Compose, `.env.example`.
+2. **PR1 – UI Kit & Landing:** Storybook, shared components, responsive landing page.
+3. **PR2 – Auth & Identity:** Wallet connect, SIWE, persona onboarding, guarded routes.
+4. **PR3 – Data Model & Prisma:** Schema definitions, migrations, initial seeds.
+5. **PR4 – Talent Hub:** Profiles, job board, applications (API + UI + Playwright E2E).
+6. **PR5 – Marketplace & Escrow:** Services, engagements, milestone endpoints and UI stubs.
+7. **PR6 – Investor Network:** Staking tiers, deal room skeleton.
+8. **PR7 – Admin Console:** KPIs, approvals, audit logging.
+9. **PR8 – Contracts Pass 1:** ERC20, staking pools, vesting, airdrop tests.
+10. **PR9 – Governance:** Proposal/vote API + contract integrations.
+11. **PR10 – Documentation & CI Hardening:** ADRs, runbooks, automation.
+
+---
+
+## 8. Contribution Guidelines
+1. **Branching:** Use feature branches derived from `main` (e.g., `feat/talent-hub`).
+2. **Conventional Commits:** `feat:`, `fix:`, `docs:`, `chore:`, `test:` prefixes keep history readable.
+3. **Small Pull Requests:** Each PR should focus on one sprint milestone and include:
+   - Summary of changes
+   - Step-by-step local testing instructions
+   - Security considerations (auth, data exposure, rate limits)
+   - Screenshots for UI changes when applicable
+4. **Code Quality:** Lint and test before pushing (`pnpm lint`, `pnpm test`, `pnpm --filter web test:e2e`, etc.).
+5. **Review Process:** Provide architectural rationale and link to ADR updates when introducing significant design changes.
+
+---
+
+## 9. Security & Compliance Priorities
+- Enforce RBAC for admin access, persona gating, and investor tiers.
+- Maintain audit logs for critical actions (approvals, payouts, staking adjustments).
+- Implement SIWE nonce handling, CSRF protection, and secure session storage.
+- Integrate KYC/AML providers with webhook validations and alerting via SIEM hooks.
+- Apply rate limiting and anomaly detection across public endpoints.
+
+---
+
+## 10. Licensing
+CheasyInvest is released under a future-to-be-defined license. Until finalized, consider all assets proprietary to the CheasyInvest team. Reach out to the project maintainers for partnership or contribution inquiries.
+
