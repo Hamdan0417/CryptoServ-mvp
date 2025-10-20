@@ -1,1 +1,1 @@
-module.exports = require('@crypto-serv/config/prettier');
+module.exports = require(require.resolve('@crypto-serv/config/prettier'));

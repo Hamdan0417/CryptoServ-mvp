@@ -1,4 +1,4 @@
 module.exports = {
   root: true,
-  extends: ['@crypto-serv/config/eslint']
+  extends: [require.resolve('@crypto-serv/config/eslint')]
 };

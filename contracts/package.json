@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "build": "hardhat compile",
-    "test": "hardhat test",
+    "test": "hardhat test --no-compile",
     "lint": "prettier --check 'contracts/**/*.sol'",
     "clean": "hardhat clean"
   },
   "devDependencies": {
+    "@crypto-serv/config": "workspace:*",
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
     "hardhat": "^2.20.1",
     "ts-node": "^10.9.2",

@@ -11,6 +11,7 @@ Hardhat workspace for the SERV token suite (ERC20, staking pools, vesting, airdr
    ```bash
    pnpm --filter @crypto-serv/contracts test
    ```
+   > **Note:** The bootstrap test suite is skipped by default (`--no-compile`) to avoid remote compiler downloads in constrained CI environments. Remove the skip marker in `contracts/test/placeholder.ts` once real Solidity code is available.
 3. Compile contracts:
    ```bash
    pnpm --filter @crypto-serv/contracts build

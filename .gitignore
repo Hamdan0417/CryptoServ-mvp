@@ -17,3 +17,4 @@ tmp
 artifacts
 coverage.json
 .husky/_
+.turbo/
